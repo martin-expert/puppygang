@@ -1,0 +1,32 @@
+{% section 'static-product' %}
+
+{% if product.handle == settings.featured-product-main %}
+  {% assign used_product_focus = false %}
+  {% assign used_technical_specifications = false %}
+  {% assign module_1 = settings.product_module_1 %}
+  {% assign module_2 = settings.product_module_2 %}
+
+  {% if module_1 != 'none' %}
+    {% if module_1 == 'module-technical-specifications-details-2' %}
+      {% section 'module-technical-specifications-details-2' %}
+      {% assign used_technical_specifications = true %}
+    {% endif %}
+
+    {% if module_1 == 'module-product-focus-details-2' %}
+      {% section 'module-product-focus-details-2' %}
+      {% assign used_product_focus = true %}
+    {% endif %}
+  {% endif %}
+
+  {% if module_2 != 'none' %}
+    {% if module_2 == 'module-technical-specifications-details-2' and used_technical_specifications == false %}
+      {% section 'module-technical-specifications-details-2' %}
+    {% endif %}
+
+    {% if module_2 == 'module-product-focus-details-2' and used_product_focus == false %}
+      {% section 'module-product-focus-details-2' %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+
+{% section 'module-related-products' %}{% include 'product_infox' %}

@@ -1,0 +1,147 @@
+{% assign has_content = false %}
+{% assign has_cta = false %}
+
+{%- if section.settings.title != blank or section.settings.text != blank -%}
+  {% assign has_content = true %}
+{%- endif -%}
+
+{%- if section.settings.button_text != blank and section.settings.button_link != blank -%}
+  {% assign has_cta = true %}
+  {% assign has_content = true %}
+{%- endif -%}
+
+<div
+  class="
+    style-{{ section.settings.style }}
+    module-wrapper
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="image-with-text"
+>
+
+  <div
+    class="
+      module
+      image-with-text
+      has-media
+      {% if has_content %}
+        has-content
+      {% else %}
+        no-content
+      {% endif %}
+    "
+  >
+    {% if section.settings.title != blank %}
+      <div class="module-header image-with-text-header">
+        <h2 class="module-title image-with-text-module-title">
+          {{ section.settings.title | escape }}
+        </h2>
+      </div>
+    {% endif %}
+
+    {% if section.settings.text != blank or has_cta %}
+      <div class="module-body image-with-text-body">
+        {% if section.settings.text != blank %}
+          <div class="module-content image-with-text-content image-with-text-body-item">
+            {{ section.settings.text }}
+          </div>
+        {% endif %}
+
+        {% if has_cta %}
+          <div class="module-cta image-with-text-cta image-with-text-body-item">
+            <a class="button" href="{{ section.settings.button_link }}">
+              {{ section.settings.button_text | escape }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.button_link != blank %}
+      <a href="{{ section.settings.button_link }}">
+    {% endif %}
+
+    {% if section.settings.image %}
+      {%
+        include 'rimg',
+        class: 'image-with-text-media',
+        img: section.settings.image,
+        size: '2048x2048',
+        lazy: true
+      %}
+    {% else %}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'image-with-text-media placeholder-svg' }}
+    {% endif %}
+
+    {% if section.settings.button_link != blank %}
+      </a>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image with text",
+  "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "Background style",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "color",
+          "label": "Color"
+        },
+        {
+          "value": "gradient",
+          "label": "Gradient"
+        }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Image with text"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Say a bit about your brand, a specific product, or promotion.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Image",
+      "name": "Image with text",
+      "settings": {}
+    }
+  ]
+}
+
+{% endschema %}

@@ -1,0 +1,1413 @@
+{
+  "current": {
+    "theme-primary-color": "#d49b94",
+    "theme-secondary-color": "#eccc46",
+    "heading-text-color": "#161a1c",
+    "body-text-color": "#7f7f7f",
+    "border-color": "#e3e3e3",
+    "body-background-color": "#ffffff",
+    "font_body": "helvetica_n4",
+    "font_headings": "helvetica_n7",
+    "font_buttons": "helvetica_n7",
+    "featured-product-main": "fishermans-catch",
+    "featured-product-main-2": "beef-lovers",
+    "featured-product-main-3": "thanksgiving-turkey",
+    "featured-product-main-4": "zesty-rosemary-chicken",
+    "product_module_1": "module-technical-specifications",
+    "product_module_2": "none",
+    "product-sale-goal-use": true,
+    "product-sale-goal-style": "gradient",
+    "product_sale_goal_button": "Pre-order",
+    "product_sale_goal_estimated_delivery_date": "Estimated delivery: April",
+    "product_goal_starting_quantity": "",
+    "product_goal": "",
+    "product_goal_use_quantity": false,
+    "product_sale_goal_date_time": "06/21/2017 15:00",
+    "social_default_image": "shopify://shop_images/puppy-gang-logo.png",
+    "social_facebook_url": "https://www.facebook.com/puppygangfreshfoods/",
+    "social_twitter_url": "",
+    "social_google_url": "",
+    "social_pinterest_url": "",
+    "social_instagram_url": "https://www.instagram.com/puppygangfreshfoods/",
+    "social_vimeo_url": "",
+    "social_youtube_url": "https://www.youtube.com/channel/UC8u23kcnaBuYcmdRFqc617g",
+    "social_rss_url": "",
+    "enable_currency_converter": true,
+    "currency_display_format": "money_with_currency_format",
+    "currency_converter_currencies": "CAD USD GBP AUD EUR INR JPY",
+    "currency_converter_default": "CAD",
+    "favicon": "",
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "theme-primary-color-hover": "#d1282f",
+    "sections": {
+      "static-slideshow": {
+        "type": "static-slideshow",
+        "blocks": {
+          "slide-1": {
+            "type": "slide",
+            "settings": {
+              "alignment": "left",
+              "text_style": "dark",
+              "image": "shopify://shop_images/puppygangfreshfoods-bnr-final_b0d7e7af-f5d7-47fb-baa8-7ea598052114.jpg",
+              "overlay_style": "none",
+              "overlay_opacity": 70,
+              "title": "Nutritious, gently cooked dog food delivered straight to your door",
+              "subtitle": "",
+              "cta": "Get Started",
+              "url": "shopify://collections/our-meals"
+            }
+          }
+        },
+        "block_order": [
+          "slide-1"
+        ],
+        "settings": {
+          "enable": true,
+          "layout": "full-window",
+          "transition": "transition-fade",
+          "autoplay_speed": 7,
+          "autoplay": false
+        }
+      },
+      "dynamic-alternating-content": {
+        "type": "dynamic-alternating-content",
+        "blocks": {
+          "alternating-content-1": {
+            "type": "image",
+            "settings": {
+              "style": "default",
+              "title": "Our Meals",
+              "text": "<p>We take feeding our dogs seriously. At Puppy Gang Fresh Foods we want our dogs to eat just as well as we do. And we know you want that too!</p>\n<p>That&rsquo;s why our products have been specifically developed in consultation with a certified holistic veterinarian to provide your dogs with healthy meals and the balance of nutrients they need. We use antibiotic and hormone free meats and our meals are free from fillers, artificial and processed ingredients.</p>",
+              "button_text": "Browse Meals",
+              "button_link": "shopify://collections/all",
+              "image": "shopify://shop_images/our-meals-homepage2.png"
+            }
+          }
+        },
+        "block_order": [
+          "alternating-content-1"
+        ],
+        "settings": {}
+      },
+      "dynamic-product-focus": {
+        "type": "dynamic-product-focus",
+        "blocks": {
+          "dynamic-product-focus-1": {
+            "type": "feature",
+            "settings": {
+              "title": "Zesty Rosemary Chicken",
+              "text": "<p><a href=\"/products/zesty-rosemary-chicken\" title=\"Zesty Rosemary Chicken\">BUY NOW</a></p>",
+              "icon": "",
+              "icon_image": "shopify://shop_images/Zesty-Rosemary-Chicken.png"
+            }
+          },
+          "dynamic-product-focus-2": {
+            "type": "feature",
+            "settings": {
+              "title": "Beef Lovers",
+              "text": "<p><a href=\"/products/beef-lovers\" title=\"Beef Lovers\">BUT NOW</a></p>",
+              "icon": "",
+              "icon_image": "shopify://shop_images/Beef-Lovers.png"
+            }
+          },
+          "dynamic-product-focus-3": {
+            "type": "feature",
+            "settings": {
+              "title": "Fisherman's Catch",
+              "text": "<p><a href=\"/products/fishermans-catch\" title=\"Fisherman's Catch\">BUY NOW</a></p>",
+              "icon": "",
+              "icon_image": "shopify://shop_images/Fisherman_s-Catch.png"
+            }
+          },
+          "dynamic-product-focus-4": {
+            "type": "feature",
+            "settings": {
+              "title": "Thanksgiving Turkey",
+              "text": "<p><a href=\"/products/variety-pack-mixed-30-pack\" title=\"Variety Pack - Mixed 30-Pack\">BUY NOW</a></p>",
+              "icon": "",
+              "icon_image": "shopify://shop_images/Thanksgiving-Turkey.png"
+            }
+          }
+        },
+        "block_order": [
+          "dynamic-product-focus-1",
+          "dynamic-product-focus-2",
+          "dynamic-product-focus-3",
+          "dynamic-product-focus-4"
+        ],
+        "settings": {
+          "show_product_image": true,
+          "product": "beef-lovers",
+          "style": "default",
+          "title": "Try Puppy Gang Fresh Foods Today",
+          "subtitle": ""
+        }
+      },
+      "dynamic-text-columns-with-icons": {
+        "type": "dynamic-text-columns-with-icons",
+        "blocks": {
+          "text-column-1": {
+            "type": "text_column",
+            "settings": {
+              "title": "Step 1",
+              "text": "<p>Set up an account and create your pup&rsquo;s profile.</p>",
+              "button_text": "",
+              "button_link": "",
+              "icon": "",
+              "icon_image": "shopify://shop_images/icon-dog.png"
+            }
+          },
+          "text-column-2": {
+            "type": "text_column",
+            "settings": {
+              "title": "Step 2",
+              "text": "<p>Design your dog&rsquo;s order by selecting the meals and choosing a 14-pack or 30-pack order and frequency. First time customers may choose a 7 pack trial pack. Pause, cancel or change your order at any time</p>",
+              "button_text": "",
+              "button_link": "",
+              "icon": "",
+              "icon_image": "shopify://shop_images/icon-cart_71d3b733-6d78-4a54-bc0a-8acd25281cbc.png"
+            }
+          },
+          "text-column-3": {
+            "type": "text_column",
+            "settings": {
+              "title": "Step 3",
+              "text": "<p>Select your preferable delivery option. Choose from PenguinPickUp or <br> door-to-door courier.</p>",
+              "button_text": "",
+              "button_link": "",
+              "icon": "",
+              "icon_image": "shopify://shop_images/icon-delivery_bac25584-5f13-488b-9ab4-8c5eb078894d.png"
+            }
+          }
+        },
+        "block_order": [
+          "text-column-1",
+          "text-column-2",
+          "text-column-3"
+        ],
+        "settings": {
+          "style": "default",
+          "columns-per-row": 3,
+          "title": "How It Works",
+          "subtitle": "Fresh, nutritious meals designed with your dog's health in mind"
+        }
+      },
+      "dynamic-testimonials": {
+        "type": "dynamic-testimonials",
+        "blocks": {
+          "testimonial-1": {
+            "type": "testimonial",
+            "settings": {
+              "quote": "<p>\"Hi Puppy Gang Fresh Foods. My&nbsp;name is Bentley and i'm a Westie who is getting older and was losing&nbsp;energy. Ever since Mom started feeding me Puppy Gang Fresh Foods Mom has&nbsp;been amazed by all my new energy and how I am acting like I did when I was&nbsp;a pup! I like all the flavors but Fisherman's Catch is my favorite! I've&nbsp;had some skin issues (which is common for Westies) and since eating Puppy&nbsp;Gang Fresh Foods my coat is soft and shiny!\"</p>",
+              "source": "Bentley",
+              "city": "Toronto",
+              "image": "shopify://shop_images/Bentley-avatar.jpg"
+            }
+          },
+          "testimonial-2": {
+            "type": "testimonial",
+            "settings": {
+              "quote": "<p>\"We are Boston Terrier sisters who LOVE to play! Since we started eating Puppy Gang Fresh Foods we have extra energy to run and jump and have fun! In fact, Mom says we still act just like puppies!\"</p>",
+              "source": "Mia & Grace",
+              "city": "Toronto",
+              "image": "shopify://shop_images/MiaGracie-avatar.jpg"
+            }
+          },
+          "1557252403640": {
+            "type": "testimonial",
+            "settings": {
+              "quote": "<p>\"My Dad and I are really active! Puppy Gang&nbsp;Fresh Foods fuels me for the long runs my dad takes me on! I am so happy&nbsp;Dad started feeding me fresh food to keep me healthy like him!\"</p>",
+              "source": "Molly",
+              "city": "Toronto",
+              "image": "shopify://shop_images/Molly-avatar.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "testimonial-1",
+          "testimonial-2",
+          "1557252403640"
+        ],
+        "settings": {
+          "style": "default",
+          "title": "What the gang are saying",
+          "subtitle": "Our happy customers"
+        }
+      },
+      "pxs-announcement-bar": {
+        "type": "pxs-announcement-bar",
+        "settings": {
+          "show_announcement": true,
+          "announcement_home_only": false,
+          "announcement_text": "Use code PuppyGang20 for 20% off your first pack! TRY NOW",
+          "announcement_text_mobile": "Use code PuppyGang20 for 20% off your first pack! TRY NOW",
+          "announcement_link": "shopify://collections/our-meals",
+          "announcement_color": "#ffffff",
+          "announcement_background": "#d49b94"
+        }
+      },
+      "static-header": {
+        "type": "static-header",
+        "settings": {
+          "menu": "main-menu",
+          "header_sticky": true,
+          "show_cart": true,
+          "drawer_social_icons": false,
+          "header_logo": "shopify://shop_images/puppy-gang-logo.png",
+          "header_logo_alternate": ""
+        }
+      },
+      "static-social-feeds": {
+        "type": "static-social-feeds",
+        "settings": {}
+      },
+      "static-footer": {
+        "type": "static-footer",
+        "blocks": {
+          "1557343654208": {
+            "type": "menu",
+            "settings": {
+              "menu": "quick-links"
+            }
+          },
+          "1557343873305": {
+            "type": "menu",
+            "settings": {
+              "menu": "help"
+            }
+          },
+          "1557343885320": {
+            "type": "social_media",
+            "settings": {}
+          },
+          "1557503376429": {
+            "type": "richtext",
+            "settings": {
+              "title": "Our Story",
+              "text": "<p>Puppy Gang Fresh Food was formed in Toronto to make it easy to feed your dogs healthy and nutritious foods. But this is not where the story starts. It starts in 2018 in Hong Kong where Kalinda, a Schnauzer was adopted and saved from a shelter.</p>\n<p><a href=\"/pages/about\" title=\"About\">Learn more &rarr;</a>&nbsp;</p>"
+            }
+          }
+        },
+        "block_order": [
+          "1557343654208",
+          "1557343873305",
+          "1557343885320",
+          "1557503376429"
+        ],
+        "settings": {
+          "style": "default",
+          "enable_borders": true,
+          "payment_icons": true,
+          "show_logo": true,
+          "footer_logo": "shopify://shop_images/puppy-gang-logo.png",
+          "footer_logo_alternate": ""
+        }
+      },
+      "static-newsletter": {
+        "type": "static-newsletter",
+        "settings": {
+          "enable": true,
+          "style": "color",
+          "title": "Join Our Puppy Gang",
+          "text": ""
+        }
+      },
+      "1557241309785": {
+        "type": "dynamic-featured-collection",
+        "disabled": true,
+        "settings": {
+          "style": "light",
+          "text_placement": "below",
+          "products-per-row": 2,
+          "product-rows": 2,
+          "title": "Try Puppy Gang Fresh Foods Today",
+          "subtitle": "",
+          "button_text": "",
+          "collection": "our-meals",
+          "collection-meals": ""
+        }
+      },
+      "static-collection": {
+        "type": "static-collection",
+        "settings": {
+          "products-per-page": 12,
+          "text_placement": "below",
+          "stock_overlay_show": false,
+          "stock-overlay-threshold": 5
+        }
+      },
+      "static-product": {
+        "type": "static-product",
+        "settings": {
+          "enable_addtocart": true,
+          "enable_zoom": true,
+          "show_spb": false,
+          "enable_cart_redirect": true,
+          "enable-share-buttons": true,
+          "additional_info_text_1": "",
+          "additional_info_url_1": "",
+          "additional_info_icon_1": "info",
+          "additional_info_text_2": "",
+          "additional_info_url_2": "",
+          "additional_info_icon_2": "info"
+        }
+      },
+      "module-related-products": {
+        "type": "module-related-products",
+        "settings": {
+          "enable": true,
+          "style": "light",
+          "stock_overlay_show": false,
+          "stock-overlay-threshold": 5
+        }
+      },
+      "template-password": {
+        "type": "template-password",
+        "settings": {}
+      },
+      "module-team": {
+        "type": "module-team",
+        "blocks": {
+          "module-team-0": {
+            "type": "team_member",
+            "settings": {
+              "image": "shopify://shop_images/marisa-founders.png",
+              "title": "Marisa Hoskins",
+              "job_title": "Co-Founder"
+            }
+          },
+          "module-team-1": {
+            "type": "team_member",
+            "settings": {
+              "image": "shopify://shop_images/sarah-founders.png",
+              "title": "Sarah Tritsaris",
+              "job_title": "Co-Founder"
+            }
+          }
+        },
+        "block_order": [
+          "module-team-0",
+          "module-team-1"
+        ],
+        "settings": {
+          "style": "default",
+          "column_count": "2",
+          "title": "",
+          "subtitle": ""
+        }
+      },
+      "static-password": {
+        "type": "static-password",
+        "settings": {
+          "newsletter_title": "Be the first to know when we launch.",
+          "newsletter_text": "",
+          "password_logo": "shopify://shop_images/puppy-gang-logo.png"
+        }
+      },
+      "module-faq": {
+        "type": "module-faq",
+        "blocks": {
+          "module-faq-0": {
+            "type": "faq",
+            "settings": {
+              "title": "How much should I feed my dog?",
+              "text": "<p>The general guideline is 1 cup of food per day for every 10 pounds your dog weighs.</p>"
+            }
+          },
+          "module-faq-1": {
+            "type": "faq",
+            "settings": {
+              "title": "How much food is in each Puppy Gang Fresh Food pack?",
+              "text": "<p>Each pack contains 2 cups.</p>"
+            }
+          },
+          "module-faq-2": {
+            "type": "faq",
+            "settings": {
+              "title": "How do I prepare the meal?",
+              "text": "<p>You can prepare in a few different ways: defrost in the fridge (this is the best way but takes the longest), immerse the pack in water, or remove the food from the package and defrost in a microwaveable safe container.</p>"
+            }
+          },
+          "1557954812487": {
+            "type": "faq",
+            "settings": {
+              "title": "Should I heat up the meal to feed to my dog?",
+              "text": "<p>Dogs do not need their food heated up. You can serve Puppy Gang Fresh Food cold once it is defrosted, or if you prefer you can slightly warm it up as well. It is already cooked, so you do not need to re-cook.</p>"
+            }
+          },
+          "1557954833370": {
+            "type": "faq",
+            "settings": {
+              "title": "How long does the package stay good once I have opened it?",
+              "text": "<p>If you store the food in a sealed container it should remain good to use for up to 4 days, similar to human food.</p>"
+            }
+          },
+          "1557954837867": {
+            "type": "faq",
+            "settings": {
+              "title": "How long can I keep the food frozen before using it?",
+              "text": "<p>As our food is vacuum sealed, it last longer in the freezer than food stored in other ways. Therefore, our food can be frozen for up to 18 months before use.</p>"
+            }
+          },
+          "1557954920930": {
+            "type": "faq",
+            "settings": {
+              "title": "Can I feed my dog the same recipe every day?",
+              "text": "<p>Puppy Gang Fresh Foods has specifically designed 4 recipes with a holistic nutritionist to ensure that they contain the required nutrients for dogs. We therefore recommend that you provide your dog with the different meals to maximise their nutrients. &nbsp;</p>"
+            }
+          },
+          "1557954944303": {
+            "type": "faq",
+            "settings": {
+              "title": "Are Puppy Gang Fresh Foods ingredients nutritious?",
+              "text": "<p>Yes, our meals have been designed with your pup&rsquo;s health in mind in conjunction with a holistic veterinarian. You will recognise all ingredients in our meals - which is important! They are hormone and antibiotic free meat with organ and bone, nutritional supplements such as kelp powder and whole fruits and vegetables to give your pup the nutrients they need.</p>"
+            }
+          },
+          "1557954977094": {
+            "type": "faq",
+            "settings": {
+              "title": "Do you have vitamins and minerals in your meals?",
+              "text": "<p>Our recipes contain a mix of macro and micronutrients found in whole meats, fish, fruits and veggies. As a result, the only mineral that we include is kelp powder which is all natural. Kelp powder is a leading source of iodine which is a trace mineral needed for healthy thyroid function. Kelp powder contains manganese, calcium, magnesium, copper, zinc, riboflavin, niacin, thiamin, as wella s vitamins A, B-12, B-6 and C.</p>"
+            }
+          },
+          "1557955000057": {
+            "type": "faq",
+            "settings": {
+              "title": "Other companies have carbohydrates such as pasta - is this needed for my pup?",
+              "text": "<p>The majority of dogs do not need grains as a component of their diet - proteins, whole fruits and vegetables will meet the nutritional needs of your pup. No dogs need refined carbohydrates, therefore pasta can be considered a &lsquo;filler&rsquo; and take away from the nutrition that your pup needs. Other grains can be considered a filler for most dogs, which is why we have specifically not added any of our recipes. However, some larger dogs may need some additional carbohydrates added to their diet. To determine whether your dog needs grains in their diet please consult with a veterinarian. We will be adding to our recipe collection and there will soon be a recipe with healthy whole grains for dogs with extra energy expenditure.</p>"
+            }
+          },
+          "1557955023292": {
+            "type": "faq",
+            "settings": {
+              "title": "How often can I receive a package?",
+              "text": "<p>If this is your first time buying Puppy Gang Fresh Foods meals for your dog, you are able to select a 7-pack meal delivery option. For regular subscribers you have the option to receive a delivery bi-weekly or monthly with 14-pack or 30-pack meals.</p>"
+            }
+          },
+          "1557955067777": {
+            "type": "faq",
+            "settings": {
+              "title": "Can I postpone a scheduled delivery?",
+              "text": "<p>Yes! You can pause your subscription through your <a href=\"/account\" title=\"https://puppygangfreshfoods.myshopify.com/account\">account page</a>.</p>"
+            }
+          },
+          "1557955180348": {
+            "type": "faq",
+            "settings": {
+              "title": "Is Puppy Gang Fresh Foods available without a subscription?",
+              "text": "<p>On your first time ordering with us you can do so without signing up to a subscription. However, Puppy Gang Fresh Foods is subscription-only for returning customers as we want to build a relationship with your pup, understand their nutritional needs and ensure you have access to the delicious food regularly. You can easily adjust, postpone or cancel your order at any time if you need to.</p>"
+            }
+          },
+          "1557955210887": {
+            "type": "faq",
+            "settings": {
+              "title": "What if I want to make a change to my subscription?",
+              "text": "<p>You can make changes to the recipes you have ordered, frequency or volume at any time through your account.</p>"
+            }
+          },
+          "1557955230308": {
+            "type": "faq",
+            "settings": {
+              "title": "What delivery options do I have?",
+              "text": "<p>We have arranged 2 delivery options for you: delivered straight to your door or at a UPS drop off location. The drop off locations may be useful if you are working late and want to ensure the meals are kept in freezer storage as long as possible. See our delivery options for more details on locations.</p>"
+            }
+          },
+          "1557955272231": {
+            "type": "faq",
+            "settings": {
+              "title": "What if I’m not home when Puppy Gang Fresh Foods delivers to my door?",
+              "text": "<p>Your pup&rsquo;s frozen meals will be delivered to you in cooler bags which will give you a longer period before needing put them in your freezer, however we do suggest that you retrieve them and put them back in the freezer within 1 hour so that they do not start to defrost.</p>"
+            }
+          },
+          "1557955301479": {
+            "type": "faq",
+            "settings": {
+              "title": "I have other questions, who can I contact?",
+              "text": "<p>We would love to connect with you, please email us at <a href=\"mailto:info@puppygangfreshfoods.com\">info@puppygangfreshfoods.com</a></p>"
+            }
+          }
+        },
+        "block_order": [
+          "module-faq-0",
+          "module-faq-1",
+          "module-faq-2",
+          "1557954812487",
+          "1557954833370",
+          "1557954837867",
+          "1557954920930",
+          "1557954944303",
+          "1557954977094",
+          "1557955000057",
+          "1557955023292",
+          "1557955067777",
+          "1557955180348",
+          "1557955210887",
+          "1557955230308",
+          "1557955272231",
+          "1557955301479"
+        ],
+        "settings": {
+          "style": "default"
+        }
+      },
+      "module-contact-form": {
+        "type": "module-contact-form",
+        "settings": {
+          "style": "light"
+        }
+      },
+      "module-map": {
+        "type": "module-map",
+        "settings": {
+          "enable": false,
+          "location_name": "Pixel Union",
+          "location_address": "1005 Langley St, Victoria, BC V8W, Canada",
+          "api_key": ""
+        }
+      },
+      "module-technical-specifications": {
+        "type": "module-technical-specifications",
+        "blocks": {
+          "module-technical-specifications-1": {
+            "type": "specification",
+            "settings": {
+              "title": "Designed For Your Dog",
+              "text": "<p>We designed each recipe to give your dog flavourful variety each day and to ensure the meals meet their nutritional needs.</p>",
+              "icon": "paw"
+            }
+          },
+          "module-technical-specifications-0": {
+            "type": "specification",
+            "settings": {
+              "title": "Quality Ingredients",
+              "text": "<p>We use premium ingredients that are hormone and antibiotic free, and do not contain any grains or fillers.</p>",
+              "icon": "nutrition"
+            }
+          },
+          "module-technical-specifications-2": {
+            "type": "specification",
+            "settings": {
+              "title": "Veterinarian Approved",
+              "text": "<p>Each recipe has been formulated by a holistic veterinarian to provide the balance your dog needs.</p>",
+              "icon": "medkit"
+            }
+          },
+          "module-technical-specifications-3": {
+            "type": "specification",
+            "settings": {
+              "title": "Heart Healthy",
+              "text": "<p>&nbsp;Our fresh dog food is loaded with healthy fats and essential fatty acids like Omega-3.</p>",
+              "icon": "pulse"
+            }
+          }
+        },
+        "block_order": [
+          "module-technical-specifications-1",
+          "module-technical-specifications-0",
+          "module-technical-specifications-2",
+          "module-technical-specifications-3"
+        ],
+        "settings": {
+          "style": "default",
+          "image_alignment": "left",
+          "title": "Technical specifications",
+          "subtitle": "",
+          "specification_image": "",
+          "specification_download_image": "",
+          "specification_download_text": "",
+          "specification_download_title": ""
+        }
+      },
+      "1558361483237": {
+        "type": "dynamic-alternating-content",
+        "blocks": {
+          "1558361483237-0": {
+            "type": "image",
+            "settings": {
+              "style": "default",
+              "title": "Ready to Serve",
+              "text": "<p>Our dogs are our family, so we have made it easy for you to feed your dogs healthy and nutritious meals. With only 10 min of preparation time, there&rsquo;s no need to keep your pup waiting. Its as easy as that!</p>",
+              "button_text": "Try Now",
+              "button_link": "shopify://collections/our-meals",
+              "image": "shopify://shop_images/ready-to-serve.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1558361483237-0"
+        ],
+        "settings": {}
+      },
+      "1558361753293": {
+        "type": "dynamic-alternating-content",
+        "blocks": {
+          "1558362185084": {
+            "type": "image",
+            "settings": {
+              "style": "default",
+              "title": "Puppy Gang Community",
+              "text": "<p>Puppy Gang Fresh Foods was formed in Toronto to make it easy to feed your dogs healthy and nutritious foods. We strive to foster a supportive group of dog lovers and focus on providing education on optimum nutrition and health for your pup! &nbsp;Join our Puppy Gang Community!</p>",
+              "button_text": "our story",
+              "button_link": "shopify://pages/about",
+              "image": "shopify://shop_images/puppy-gang-community.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1558362185084"
+        ],
+        "settings": {}
+      },
+      "static-cart": {
+        "type": "static-cart",
+        "settings": {
+          "enable_checkout_lock_icon": false,
+          "order_notes": false,
+          "show_shipping_calculator": false,
+          "shipping_calculator_default_country": "United States"
+        }
+      },
+      "dynamic-section": {
+        "type": "dynamic-section",
+        "blocks": {
+          "1563517073864": {
+            "type": "partner-section",
+            "settings": {
+              "dynamicImage": "shopify://shop_images/cct-logo.jpg",
+              "title": "Corporate Canine Therapy (CCT)",
+              "subtitle": "Your Go-To Trained Therapy Dog Provider",
+              "dynamicDescription": "<p>Corporate Canine Therapy (CCT) is a reputable, Toronto-based company that provides trained Therapy dogs and their Handlers to the workplace environment (one dog and their owner/handler is a &lsquo;team&rsquo;). We promote employee productivity and well-being by offering therapeutic dog visits right in your office space!<br><br>Your experience is our top priority. We provide a variety of unique services as well as offering exceptional choice of dog breeds and sizes to suit the wishes of individuals. We understand that not everyone is comfortable with dogs, which is why the communication with us prior to visits enables us to customize the interaction during your visit.&nbsp;<br><br>We understand the benefits of the human/canine interaction. Our dedicated team will facilitate a structured office visit in a controlled environment at your place of work - board room, at your desk, or even outdoors. &nbsp;<br>Customize your CCT visit today! Discover a new way to engage your employees.&nbsp;</p>"
+            }
+          }
+        },
+        "block_order": [
+          "1563517073864"
+        ],
+        "settings": {}
+      },
+      "1564579361837": {
+        "type": "dynamic-featured-collection",
+        "settings": {
+          "style": "default",
+          "text_placement": "overlay",
+          "products-per-row": 2,
+          "product-rows": 2,
+          "title": "Featured collection",
+          "subtitle": "",
+          "button_text": "",
+          "collection": "variety-packs",
+          "collection-meals": "our-meals"
+        }
+      }
+    },
+    "content_for_index": [
+      "dynamic-alternating-content",
+      "1564579361837",
+      "dynamic-text-columns-with-icons",
+      "1558361483237",
+      "dynamic-product-focus",
+      "1557241309785",
+      "1558361753293",
+      "dynamic-testimonials"
+    ]
+  },
+  "presets": {
+    "Cool": {
+      "theme-primary-color": "#0381A2",
+      "theme-primary-color-hover": "#0288b5",
+      "theme-secondary-color": "#554d99",
+      "heading-text-color": "#000000",
+      "body-text-color": "#797676",
+      "border-color": "#e3e3e3",
+      "body-background-color": "#fff",
+      "font_body": "roboto_n3",
+      "font_headings": "open_sans_n3",
+      "font_buttons": "open_sans_n7",
+      "sections": {
+        "static-slideshow": {
+          "type": "static-slideshow",
+          "blocks": {
+            "slide-1": {
+              "type": "slide",
+              "settings": {
+                "alignment": "center",
+                "title": "Slideshow",
+                "subtitle": "Introduce customers to your shop with lifestyle imagery and product photography."
+              }
+            },
+            "slide-2": {
+              "type": "slide",
+              "settings": {
+                "alignment": "center",
+                "title": "Slideshow",
+                "subtitle": "Introduce customers to your shop with lifestyle imagery and product photography."
+              }
+            }
+          },
+          "block_order": [
+            "slide-1",
+            "slide-2"
+          ],
+          "settings": {
+            "enable": true,
+            "layout": "full-window",
+            "transition": "transition-fade",
+            "autoplay": true
+          }
+        },
+        "dynamic-alternating-content": {
+          "type": "dynamic-alternating-content",
+          "blocks": {
+            "alternating-content-1": {
+              "type": "image",
+              "settings": {
+                "style": "default",
+                "button_text": "This is your call to action",
+                "button_link": "shopify://collections"
+              }
+            },
+            "alternating-content-2": {
+              "type": "video",
+              "settings": {
+                "style": "light",
+                "button_text": "This is your call to action",
+                "button_link": "shopify://collections"
+              }
+            },
+            "alternating-content-3": {
+              "type": "image",
+              "settings": {
+                "style": "default",
+                "button_text": "This is your call to action",
+                "button_link": "shopify://collections"
+              }
+            }
+          },
+          "block_order": [
+            "alternating-content-1",
+            "alternating-content-2",
+            "alternating-content-3"
+          ],
+          "settings": {}
+        },
+        "dynamic-product-focus": {
+          "type": "dynamic-product-focus",
+          "blocks": {
+            "dynamic-product-focus-1": {
+              "type": "feature",
+              "settings": {
+                "icon": "refresh"
+              }
+            },
+            "dynamic-product-focus-2": {
+              "type": "feature",
+              "settings": {
+                "icon": "volume-high"
+              }
+            },
+            "dynamic-product-focus-3": {
+              "type": "feature",
+              "settings": {
+                "icon": "battery-charging"
+              }
+            },
+            "dynamic-product-focus-4": {
+              "type": "feature",
+              "settings": {
+                "icon": "microphone"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-product-focus-1",
+            "dynamic-product-focus-2",
+            "dynamic-product-focus-3",
+            "dynamic-product-focus-4"
+          ],
+          "settings": {
+            "show_product_image": true,
+            "style": "light",
+            "title": "Product focus",
+            "subtitle": "Highlight your product's finest features."
+          }
+        },
+        "dynamic-images-with-text": {
+          "type": "dynamic-images-with-text",
+          "blocks": {
+            "images-with-text-1": {
+              "type": "image",
+              "settings": {
+                "text": "<p>Say a bit about your brand, a specific product, or promotion.</p>"
+              }
+            },
+            "images-with-text-2": {
+              "type": "image",
+              "settings": {
+                "text": "<p>Display up to four images, each with their own unique heading and text.</p>"
+              }
+            },
+            "images-with-text-3": {
+              "type": "image",
+              "settings": {
+                "text": "<p>Offer customers a wealth of information while conserving valuable vertical space on your homepage.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "images-with-text-1",
+            "images-with-text-2",
+            "images-with-text-3"
+          ],
+          "settings": {
+            "style": "default",
+            "alignment": "left"
+          }
+        },
+        "pxs-video": {
+          "type": "pxs-video",
+          "settings": {}
+        },
+        "dynamic-text-columns-with-icons": {
+          "type": "dynamic-text-columns-with-icons",
+          "blocks": {
+            "text-column-1": {
+              "type": "text_column",
+              "settings": {}
+            },
+            "text-column-2": {
+              "type": "text_column",
+              "settings": {}
+            },
+            "text-column-3": {
+              "type": "text_column",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text-column-1",
+            "text-column-2",
+            "text-column-3"
+          ],
+          "settings": {
+            "style": "default",
+            "title": "Text columns with icons"
+          }
+        },
+        "dynamic-testimonials": {
+          "type": "dynamic-testimonials",
+          "blocks": {
+            "testimonial-1": {
+              "type": "testimonial",
+              "settings": {}
+            },
+            "testimonial-2": {
+              "type": "testimonial",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "testimonial-1",
+            "testimonial-2"
+          ],
+          "settings": {
+            "style": "default",
+            "title": "Testimonials"
+          }
+        },
+        "dynamic-blog-posts": {
+          "type": "dynamic-blog-posts",
+          "settings": {
+            "style": "light",
+            "posts-to-show": 3,
+            "title": "Blog posts"
+          }
+        },
+        "pxs-announcement-bar": {
+          "type": "pxs-announcement-bar",
+          "settings": {
+            "announcement_background": "#554d99"
+          }
+        },
+        "static-social-feeds": {
+          "type": "static-social-feeds",
+          "blocks": {
+            "widget-block-1": {
+              "type": "instagram",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "widget-block-1"
+          ],
+          "settings": {}
+        },
+        "static-footer": {
+          "type": "static-footer",
+          "settings": {
+            "style": "default",
+            "enable_borders": true
+          }
+        }
+      },
+      "content_for_index": [
+        "dynamic-alternating-content",
+        "dynamic-product-focus",
+        "dynamic-images-with-text",
+        "pxs-video",
+        "dynamic-text-columns-with-icons",
+        "dynamic-testimonials",
+        "dynamic-blog-posts"
+      ]
+    },
+    "Fresh": {
+      "theme-primary-color": "#857b58",
+      "theme-primary-color-hover": "#6f6850",
+      "theme-secondary-color": "#4e7f74",
+      "heading-text-color": "#191919",
+      "body-text-color": "#5e5e5e",
+      "border-color": "#e6e6e6",
+      "body-background-color": "#ffffff",
+      "font_body": "roboto_condensed_n3",
+      "font_headings": "playfair_display_n7",
+      "font_buttons": "roboto_n7",
+      "sections": {
+        "static-slideshow": {
+          "type": "static-slideshow",
+          "blocks": {
+            "slide-1": {
+              "type": "slide",
+              "settings": {
+                "alignment": "center",
+                "title": "Slideshow",
+                "subtitle": "Introduce customers to your shop with lifestyle imagery and product photography."
+              }
+            },
+            "slide-2": {
+              "type": "slide",
+              "settings": {
+                "alignment": "center",
+                "title": "Slideshow",
+                "subtitle": "Introduce customers to your shop with lifestyle imagery and product photography."
+              }
+            }
+          },
+          "block_order": [
+            "slide-1",
+            "slide-2"
+          ],
+          "settings": {
+            "enable": true,
+            "layout": "full-window",
+            "transition": "transition-slide",
+            "autoplay": false
+          }
+        },
+        "dynamic-featured-collection": {
+          "type": "dynamic-featured-collection",
+          "settings": {
+            "style": "default",
+            "products-per-row": 3,
+            "product-rows": 2,
+            "title": "Featured collection"
+          }
+        },
+        "dynamic-alternating-content": {
+          "type": "dynamic-alternating-content",
+          "blocks": {
+            "alternating-content-1": {
+              "type": "image",
+              "settings": {
+                "style": "default",
+                "button_text": "This is your call to action",
+                "button_link": "shopify://collections"
+              }
+            },
+            "alternating-content-2": {
+              "type": "video",
+              "settings": {
+                "style": "light",
+                "button_text": "This is your call to action",
+                "button_link": "shopify://collections"
+              }
+            },
+            "alternating-content-3": {
+              "type": "image",
+              "settings": {
+                "style": "default",
+                "button_text": "This is your call to action",
+                "button_link": "shopify://collections"
+              }
+            }
+          },
+          "block_order": [
+            "alternating-content-1",
+            "alternating-content-2",
+            "alternating-content-3"
+          ],
+          "settings": {}
+        },
+        "dynamic-text-columns-with-icons": {
+          "type": "dynamic-text-columns-with-icons",
+          "blocks": {
+            "text-column-1": {
+              "type": "text_column",
+              "settings": {}
+            },
+            "text-column-2": {
+              "type": "text_column",
+              "settings": {}
+            },
+            "text-column-3": {
+              "type": "text_column",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text-column-1",
+            "text-column-2",
+            "text-column-3"
+          ],
+          "settings": {
+            "style": "default",
+            "title": "Text columns with icons"
+          }
+        },
+        "pxs-video": {
+          "type": "pxs-video",
+          "settings": {}
+        },
+        "dynamic-testimonials": {
+          "type": "dynamic-testimonials",
+          "blocks": {
+            "testimonial-1": {
+              "type": "testimonial",
+              "settings": {}
+            },
+            "testimonial-2": {
+              "type": "testimonial",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "testimonial-1",
+            "testimonial-2"
+          ],
+          "settings": {
+            "style": "default",
+            "title": "Testimonials"
+          }
+        },
+        "dynamic-blog-posts": {
+          "type": "dynamic-blog-posts",
+          "settings": {
+            "style": "light",
+            "posts-to-show": 3,
+            "title": "Blog posts"
+          }
+        },
+        "pxs-announcement-bar": {
+          "type": "pxs-announcement-bar",
+          "settings": {
+            "announcement_background": "#4e7f74"
+          }
+        },
+        "static-social-feeds": {
+          "type": "static-social-feeds",
+          "blocks": {
+            "widget-block-1": {
+              "type": "twitter",
+              "settings": {
+                "style": "gradient"
+              }
+            }
+          },
+          "block_order": [
+            "widget-block-1"
+          ],
+          "settings": {}
+        },
+        "static-footer": {
+          "type": "static-footer",
+          "settings": {
+            "style": "light",
+            "enable_borders": true,
+            "show_logo": true
+          }
+        }
+      },
+      "content_for_index": [
+        "dynamic-featured-collection",
+        "dynamic-alternating-content",
+        "dynamic-text-columns-with-icons",
+        "pxs-video",
+        "dynamic-testimonials",
+        "dynamic-blog-posts"
+      ]
+    },
+    "Bold": {
+      "theme-primary-color": "#ea2931",
+      "theme-primary-color-hover": "#d1282f",
+      "theme-secondary-color": "#fd8311",
+      "heading-text-color": "#161a1c",
+      "body-text-color": "#7f7f7f",
+      "border-color": "#e3e3e3",
+      "body-background-color": "#ffffff",
+      "font_body": "source_sans_pro_n3",
+      "font_headings": "montserrat_n4",
+      "font_buttons": "source_sans_pro_n7",
+      "sections": {
+        "static-slideshow": {
+          "type": "static-slideshow",
+          "blocks": {
+            "slide-1": {
+              "type": "slide",
+              "settings": {
+                "alignment": "center",
+                "title": "Slideshow",
+                "subtitle": "Introduce customers to your shop with lifestyle imagery and product photography."
+              }
+            }
+          },
+          "block_order": [
+            "slide-1"
+          ],
+          "settings": {
+            "enable": true,
+            "layout": "full-width",
+            "transition": "transition-fade",
+            "autoplay": false
+          }
+        },
+        "dynamic-alternating-content": {
+          "type": "dynamic-alternating-content",
+          "blocks": {
+            "alternating-content-1": {
+              "type": "image",
+              "settings": {
+                "style": "default",
+                "button_text": "This is your call to action",
+                "button_link": "shopify://collections"
+              }
+            },
+            "alternating-content-2": {
+              "type": "video",
+              "settings": {
+                "style": "light",
+                "button_text": "This is your call to action",
+                "button_link": "shopify://collections"
+              }
+            },
+            "alternating-content-3": {
+              "type": "image",
+              "settings": {
+                "style": "default",
+                "button_text": "This is your call to action",
+                "button_link": "shopify://collections"
+              }
+            }
+          },
+          "block_order": [
+            "alternating-content-1",
+            "alternating-content-2",
+            "alternating-content-3"
+          ],
+          "settings": {}
+        },
+        "dynamic-product-focus": {
+          "type": "dynamic-product-focus",
+          "blocks": {
+            "dynamic-product-focus-1": {
+              "type": "feature",
+              "settings": {
+                "icon": "refresh"
+              }
+            },
+            "dynamic-product-focus-2": {
+              "type": "feature",
+              "settings": {
+                "icon": "volume-high"
+              }
+            },
+            "dynamic-product-focus-3": {
+              "type": "feature",
+              "settings": {
+                "icon": "battery-charging"
+              }
+            },
+            "dynamic-product-focus-4": {
+              "type": "feature",
+              "settings": {
+                "icon": "microphone"
+              }
+            }
+          },
+          "block_order": [
+            "dynamic-product-focus-1",
+            "dynamic-product-focus-2",
+            "dynamic-product-focus-3",
+            "dynamic-product-focus-4"
+          ],
+          "settings": {
+            "show_product_image": true,
+            "style": "light",
+            "title": "Product focus",
+            "subtitle": "Highlight your product's finest features."
+          }
+        },
+        "dynamic-images-with-text": {
+          "type": "dynamic-images-with-text",
+          "blocks": {
+            "images-with-text-1": {
+              "type": "image",
+              "settings": {
+                "text": "<p>Say a bit about your brand, a specific product, or promotion.</p>"
+              }
+            },
+            "images-with-text-2": {
+              "type": "image",
+              "settings": {
+                "text": "<p>Display up to four images, each with their own unique heading and text.</p>"
+              }
+            },
+            "images-with-text-3": {
+              "type": "image",
+              "settings": {
+                "text": "<p>Offer customers a wealth of information while conserving valuable vertical space on your homepage.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "images-with-text-1",
+            "images-with-text-2",
+            "images-with-text-3"
+          ],
+          "settings": {
+            "style": "default",
+            "alignment": "right"
+          }
+        },
+        "dynamic-text-columns-with-icons": {
+          "type": "dynamic-text-columns-with-icons",
+          "blocks": {
+            "text-column-1": {
+              "type": "text_column",
+              "settings": {}
+            },
+            "text-column-2": {
+              "type": "text_column",
+              "settings": {}
+            },
+            "text-column-3": {
+              "type": "text_column",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text-column-1",
+            "text-column-2",
+            "text-column-3"
+          ],
+          "settings": {
+            "style": "light",
+            "title": "Text columns with icons"
+          }
+        },
+        "pxs-video": {
+          "type": "pxs-video",
+          "settings": {}
+        },
+        "dynamic-testimonials": {
+          "type": "dynamic-testimonials",
+          "blocks": {
+            "testimonial-1": {
+              "type": "testimonial",
+              "settings": {}
+            },
+            "testimonial-2": {
+              "type": "testimonial",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "testimonial-1",
+            "testimonial-2"
+          ],
+          "settings": {
+            "style": "default",
+            "title": "Testimonials"
+          }
+        },
+        "dynamic-blog-posts": {
+          "type": "dynamic-blog-posts",
+          "settings": {
+            "style": "light",
+            "posts-to-show": 2,
+            "title": "Blog posts"
+          }
+        },
+        "pxs-announcement-bar": {
+          "type": "pxs-announcement-bar",
+          "settings": {
+            "announcement_background": "#fd8311"
+          }
+        },
+        "static-header": {
+          "type": "static-header",
+          "settings": {
+            "header_sticky": true
+          }
+        },
+        "static-social-feeds": {
+          "type": "static-social-feeds",
+          "blocks": {
+            "widget-block-1": {
+              "type": "instagram",
+              "settings": {}
+            },
+            "widget-block-2": {
+              "type": "twitter",
+              "settings": {
+                "style": "light"
+              }
+            }
+          },
+          "block_order": [
+            "widget-block-1",
+            "widget-block-2"
+          ],
+          "settings": {}
+        },
+        "static-footer": {
+          "type": "static-footer",
+          "settings": {
+            "style": "default",
+            "enable_borders": true,
+            "show_logo": true
+          }
+        }
+      },
+      "content_for_index": [
+        "dynamic-alternating-content",
+        "dynamic-product-focus",
+        "dynamic-images-with-text",
+        "dynamic-text-columns-with-icons",
+        "pxs-video",
+        "dynamic-testimonials",
+        "dynamic-blog-posts"
+      ]
+    }
+  }
+}

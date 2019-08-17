@@ -1,0 +1,8 @@
+node_modules/*
+deploy/*
+.env
+dist
+releases
+.DS_Store
+package-lock.json
+deploy.log

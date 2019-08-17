@@ -1,0 +1,30 @@
+
+
+
+<div class="partners_thmb">
+{% if block.settings.dynamicImage != blank %}
+
+  <div class="partners_img"><img src="{{ block.settings.dynamicImage | img_url: ''}}" alt=""></div>
+
+{% endif %}
+
+
+
+{% if block.settings.title != blank %}
+<h3 class="dynamic-title">
+  {{ block.settings.title | escape }}
+</h3>
+{% endif %}
+
+
+{% if block.settings.subtitle != blank %}
+<p class="dynamic-subtitle">
+  {{ block.settings.subtitle | escape }}
+</p>
+{% endif %}
+
+{% if block.settings.dynamicDescription != blank %}
+  {{ block.settings.dynamicDescription }}
+{% endif %}
+  
+</div>

@@ -1,0 +1,50 @@
+<div class="row">
+
+        {% for block in section.blocks %}
+        <div class="col-md-4 col-sm-12">
+          {% case block.type %}
+
+            {% when 'partner-section' %}
+            {% include 'snippet_partner-section' %}
+
+
+          {% endcase %}
+        </div>
+        {% endfor %}
+      </div>
+
+
+{% schema %}
+        {
+          "blocks": [
+            {
+              "type": "partner-section",
+              "name": "Partner Section",
+              "settings": [
+                  {
+                  "id": "dynamicImage",
+                  "type": "image_picker",
+                  "label": "Image"
+                },
+{
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subheading"
+    },
+{
+          "type": "richtext",
+          "id": "dynamicDescription",
+          "label": "Description",
+          "default": "<p>Dynamic Description</p>" 
+        }
+              ]
+            } 
+          ]
+        }
+      {% endschema %}

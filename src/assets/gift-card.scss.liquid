@@ -1,0 +1,436 @@
+{% assign font_settings = 'font_body:lighter,bolder|font_headings:bolder|font_buttons:bolder' %}
+{% assign font_settings = font_settings | split: '|' %}
+{% assign font_scss_variables = '' %}
+{% for font_setting in font_settings %}
+  {% assign font_info = font_setting | split: ':' %}
+
+  {% comment %}Get setting name{% endcomment %}
+  {% assign font_setting_name = font_info[0] %}
+
+  {% comment %}Get additional weights{% endcomment %}
+  {% assign font_additional_weights = font_info[1] | split: ',' | uniq %}
+
+  {% comment %}Create variables for use in SCSS{% endcomment %}
+  {% assign font_scss_base = font_setting_name | replace: '_', '-' | prepend: '$' %}
+  {% assign font_scss_reference = font_scss_base %}
+  {% assign font_scss_family = font_scss_base | append: '-family' %}
+  {% assign font_scss_weights = font_scss_base | append: '-weights' %}
+  {% assign font_scss_named_weights = font_scss_base | append: '-named-weights' %}
+  {% assign font_scss_styles = font_scss_base | append: '-styles' %}
+  {% assign font_scss_named_styles = font_scss_base | append: '-named-styles' %}
+
+  {% comment %}Add the current setting to a list of reference variables{% endcomment %}
+  {% assign font_scss_variables = font_scss_variables | append: '|' | append: font_scss_reference %}
+
+  {% comment %}Get the initial FontDrop, and an italic style FontDrop{% endcomment %}
+  {% assign font_initial = settings[font_setting_name] %}
+  {% assign font_initial_weight = font_initial.weight | times: 1 %}
+  {% assign font_italic = font_initial | font_modify: 'style', 'italic' %}
+  {% assign font_styles = '(' | append: font_initial.style %}
+  {% assign font_named_styles = '(initial' %}
+  {% assign font_weights = font_initial_weight %}
+  {% assign font_named_weights = 'initial' %}
+
+  {{ font_initial | font_face }}
+  {{ font_italic | font_face }}
+
+  {% comment %}Use the font face italic style if possible, otherwise use something browser friendly{% endcomment %}
+  {% assign font_initial_italic_style = font_italic.style | default: 'italic' %}
+  {% assign font_styles = font_styles | append: ', ' | append: font_initial_italic_style %}
+  {% assign font_named_styles = font_named_styles | append: ', italic' %}
+
+  {% assign font_styles = font_styles | append: ')' %}
+  {% assign font_named_styles = font_named_styles | append: ')' %}
+
+  {% comment %}Iterate over each additional weight to load font face, and weights{% endcomment %}
+  {% for font_adjustment in font_additional_weights %}
+    {% assign font_weighted = font_initial | font_modify: 'weight', font_adjustment %}
+    {% assign font_styled = font_weighted | font_modify: 'style', 'italic' %}
+    {% assign font_weighted_styles = blank %}
+    {% assign font_weighted_named_styles = blank %}
+
+    {% comment %}If additional weight exists, generate font face{% endcomment %}
+    {{ font_weighted | font_face }}
+
+    {% comment %}Create a default value of the weight adjustment is not possible{% endcomment %}
+    {% assign font_adjustment_default = '' %}
+    {% case font_adjustment %}
+      {% when 'lighter' %}
+        {% comment %}Shopify requirement: If lighter variant is not found, use default value of 300{% endcomment %}
+        {% assign font_adjustment_default = 300 %}
+        {% if font_initial_weight < 300 %}
+          {% assign font_adjustment_default = font_initial_weight %}
+        {% endif %}
+      {% when 'bolder' %}
+        {% comment %}Shopify requirement: If bolder variant is not found, use default value of 700{% endcomment %}
+        {% assign font_adjustment_default = 700 %}
+        {% if font_initial_weight > 700 %}
+          {% assign font_adjustment_default = font_initial_weight %}
+        {% endif %}
+      {% else %}
+        {% assign font_adjustment_default = font_adjustment %}
+    {% endcase %}
+    {% assign font_weighted_value = font_weighted.weight | default: font_adjustment_default %}
+    {% assign font_weighted_style = font_weighted.style | default: 'normal' %}
+
+    {% assign font_weights = font_weights | append: '|' | append: font_weighted_value %}
+    {% assign font_named_weights = font_named_weights | append: '|' | append: font_adjustment %}
+    {% assign font_weighted_styles = font_weighted_styles | append: font_weighted_style %}
+    {% assign font_weighted_named_styles = font_weighted_named_styles | append: 'initial' %}
+
+    {% comment %}If italic exists for weight, generate font face{% endcomment %}
+    {{ font_styled | font_face }}
+    {% assign font_weighted_italic_style = font_styled.style | default: 'italic' %}
+    {% assign font_weighted_styles = font_weighted_styles | append: '|' | append: font_weighted_italic_style %}
+    {% assign font_weighted_named_styles = font_weighted_named_styles | append: '|italic' %}
+
+    {% if font_weighted_styles != blank %}
+      {% assign font_weighted_styles = font_weighted_styles | split: '|' | join: ', ' %}
+      {% assign font_weighted_named_styles = font_weighted_named_styles | split: '|' | join: ', ' %}
+
+      {% assign font_styles = font_styles | append: '|(' | append: font_weighted_styles | append: ')'%}
+      {% assign font_named_styles = font_named_styles | append: '|(' | append: font_weighted_named_styles | append: ')'%}
+    {% endif %}
+
+    {% assign font_weighted = blank %}
+    {% assign font_styled = blank %}
+    {% assign font_weighted_styles = blank %}
+
+    {% assign font_adjustment_default = blank %}
+    {% assign font_weighted_value = blank %}
+    {% assign font_weighted_style = blank %}
+    {% assign font_weighted_italic_style = blank %}
+  {% endfor %}
+
+  {% comment %}If only one weight, add an empty list to styles{% endcomment %}
+  {% comment %}`length()` reports length of nested list if list only has 1 index{% endcomment %}
+  {% assign font_weights_size = font_weights | split: '|' %}
+  {% if font_weights_size.size == 1 %}
+    {% assign font_styles = font_styles | append: '|()' %}
+    {% assign font_named_styles = font_named_styles | append: '|()' %}
+  {% endif %}
+
+  {{ font_scss_reference }}: {{ font_setting_name }};
+  {{ font_scss_family }}: {{ font_initial.family }}, {{ font_initial.fallback_families }};
+  {{ font_scss_styles }}: ({{ font_styles | split: '|' | join: ', ' }});
+  {{ font_scss_named_styles }}: ({{ font_named_styles | split: '|' | join: ', ' }});
+  {{ font_scss_weights }}: ({{ font_weights | split: '|' | join: ', ' }});
+  {{ font_scss_named_weights }}: ({{ font_named_weights | split: '|' | join: ', ' }});
+
+  {% comment %}Blank used variables to prevent bleeding{% endcomment %}
+  {% assign font_info = blank %}
+  {% assign font_setting_name = blank %}
+  {% assign font_additional_weights = blank %}
+  {% assign font_scss_base = blank %}
+  {% assign font_scss_reference = blank %}
+  {% assign font_scss_family = blank %}
+  {% assign font_scss_styles = blank %}
+  {% assign font_scss_named_styles = blank %}
+  {% assign font_scss_weights = blank %}
+  {% assign font_scss_named_weights = blank %}
+  {% assign font_initial = blank %}
+  {% assign font_italic = blank %}
+  {% assign font_weights = blank %}
+  {% assign font_named_weights = blank %}
+  {% assign font_initial_italic_style = blank %}
+  {% assign font_styles = blank %}
+  {% assign font_named_styles = blank %}
+{% endfor %}
+
+{% assign font_scss_variables = font_scss_variables | remove_first: '|' | split: '|' %}
+
+{% comment %}Build SCSS friendly lists of weights{% endcomment %}
+{% assign font_variable_families = '' %}
+{% assign font_variable_weights = '' %}
+{% assign font_variable_named_weights = '' %}
+{% assign font_variable_styles = '' %}
+{% assign font_variable_named_styles = '' %}
+
+{% for variable in font_scss_variables %}
+  {% assign font_variable_families = font_variable_families | append: ' ' | append: variable | append: '-family' %}
+  {% assign font_variable_weights = font_variable_weights | append: ' ' | append: variable | append: '-weights' %}
+  {% assign font_variable_named_weights = font_variable_named_weights | append: ' ' | append: variable | append: '-named-weights' %}
+  {% assign font_variable_styles = font_variable_styles | append: ' ' | append: variable | append: '-styles' %}
+  {% assign font_variable_named_styles = font_variable_named_styles | append: ' ' | append: variable | append: '-named-styles' %}
+{% endfor %}
+
+$font-variables: ({{ font_scss_variables | join: ' ' }});
+$font-variables-families: ({{ font_variable_families | strip }});
+$font-variables-weights: ({{ font_variable_weights | strip }});
+$font-variables-named-weights: ({{ font_variable_named_weights | strip }});
+$font-variables-styles: ({{ font_variable_styles | strip }});
+$font-variables-named-styles: ({{ font_variable_named_styles | strip }});
+
+// Find the index of the font setting for cross referencing
+@function font-setting-index($font-type) {
+  @return index($font-variables, $font-type);
+}
+
+// Font
+// --------
+// Find the index of a font weight from its relative name
+// - [$font-type]: Variable of font to look up
+// - [$font-weight]: lighter/initial/bolder
+@function font-weight-index($font-type, $font-weight: initial) {
+  $font-setting-index: font-setting-index($font-type);
+
+  // Look up available weights based on index of font setting
+  $named-weights: nth($font-variables-named-weights, $font-setting-index);
+
+  // Try to find index of desired font weight by cross referencing
+  $weight-index: index($named-weights, $font-weight);
+
+  // Return index of named weight, or return initial weight
+  @return if($weight-index, $weight-index, 1);
+}
+
+// Font
+// --------
+// Find the font family for a font setting
+// - [$font-type]: Variable of font to look up
+@function font-family($font-type) {
+  @return nth($font-variables-families, font-setting-index($font-type));
+}
+
+// Font
+// --------
+// Find a font style relative to a font weight
+// - [$font-type]: Variable of font to look up
+// - [$font-style]: initial/italic
+// - [$font-weight]: lighter/initial/bolder
+@function font-style($font-type, $font-style: initial, $font-weight: initial) {
+  $style: null;
+  $styles: null;
+
+  // Find index of font setting
+  $font-setting-index: font-setting-index($font-type);
+
+  // Get styles based on index of font setting
+  $font-styles: nth($font-variables-styles, $font-setting-index);
+  $font-named-styles: nth($font-variables-named-styles, $font-setting-index);
+
+  // Try to find index of desired font weight by cross referencing
+  $weight-named-index: font-weight-index($font-type, $font-weight);
+
+  // Get styles available for $font-weight
+  $named-weight-style: nth($font-styles, $weight-named-index);
+  $named-weight-named-style: nth($font-named-styles, $weight-named-index);
+
+  // Find position of $font-style
+  $style-named-index: index($named-weight-named-style, $font-style);
+
+  @if $style-named-index {
+    @return nth($named-weight-style, $style-named-index);
+  } @else {
+    // Return initial font style
+    @return nth($named-weight-style, 1);
+  }
+}
+
+// Font weight
+// --------
+// Find a font sensitive relative weight
+// - [$font-type]: Variable of font to look up
+// - [$font-weight]: lighter/initial/bolder
+@function font-weight($font-type, $font-weight: initial) {
+  $weight: null;
+
+  // Find index of font setting
+  $font-setting-index: font-setting-index($font-type);
+
+  // Look up available weights based on index of font setting
+  $weights: nth($font-variables-weights, $font-setting-index);
+
+  // Try to find index of desired font weight by cross referencing
+  $weight-index: font-weight-index($font-type, $font-weight);
+
+  // Return numerical weight of font
+  @return nth($weights, $weight-index);
+}
+
+// Font
+// --------
+// Generate complete font styles for a font setting
+// - [$font-type]: Variable of font to look up
+// - [$font-family]: true/false
+// - [$font-size]: unit/false
+// - [$font-style]: initial/italic/false
+// - [$font-weight]: lighter/initial/bolder/false
+@mixin font(
+  $font-type,
+  $font-family: true,
+  $font-size: false,
+  $font-style: initial,
+  $font-weight: initial
+) {
+  @if $font-family { font-family: font-family($font-type); }
+  @if $font-size { font-size: $font-size; }
+  @if $font-style { font-style: font-style($font-type, $font-style: $font-style, $font-weight: $font-weight ); }
+  @if $font-weight { font-weight: font-weight($font-type, $font-weight: $font-weight); }
+}
+
+{% assign font_scss_variables = blank %}
+{% assign font_variable_families = blank %}
+{% assign font_variable_weights = blank %}
+{% assign font_variable_named_weights = blank %}
+{% assign font_variable_styles = blank %}
+{% assign font_variable_named_styles = blank %}
+
+
+// Colors
+
+$primary-color: {{ settings.theme-primary-color }};
+$primary-color-hover: $primary-color;
+$secondary-color: {{ settings.theme-secondary-color }};
+$secondary-color-hover: $secondary-color;
+$body-text-color: {{ settings.body-text-color }};
+$body-background-color: {{ settings.body-background-color }};
+$heading-text-color: {{ settings.heading-text-color }};
+$border-color: {{ settings.border-color }};
+
+$error-color: #e13333;
+$success-color: #5bef6b;
+$black: #000;
+$white: #fff;
+$light-grey: #eeeeee;
+$very-light-grey: #fafafa;
+$dark-color: #191919;
+
+// Fonts
+$font-body: $font-body !default;
+$font-headings: $font-headings !default;
+$font-buttons: $font-buttons !default;
+$button-min-width: 220px;
+
+// Logo
+
+$logo-max-width: 200px;
+$logo-max-height: 100px;
+
+// Layout
+
+$gutter: 30px;
+$gutter-half: $gutter / 2;
+$gutter-double: $gutter * 2;
+$gutter-triple: $gutter * 3;
+$max-width: 1200px;
+$ease: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+// Typography
+
+$heading-font-size-1: 48px;
+$heading-font-size-1-xs: 38px;
+$heading-font-size-2: 36px;
+$heading-font-size-2-xs: 26px;
+$heading-font-size-3: 22px;
+$heading-font-size-3-xs: 18px;
+$heading-font-size-4: 20px;
+$heading-font-size-4-xs: 18px;
+$heading-font-size-5: 18px;
+
+$body-font-size-1: 16px;
+$body-font-size-2: 14px;
+$body-font-size-3: 12px;
+$body-line-height-1: 28px;
+$body-line-height-2: 26px;
+$subtitle-font-size: 18px;
+$button-height: 55px;
+
+$header-height: 120px;
+$header-small-height: 80px;
+$header-font-size: 12px;
+$header-zindex: 110;
+$header-goal-height: 56px;
+$drawer-font-size: 26px;
+
+$input-number-height: 53px;
+$input-number-width: 75px;
+$input-number-nav-width: 25px;
+$select-height: 55px;
+
+$list-icon-size: 60px;
+$sale-badge-size-small: 45px;
+$sale-badge-size-large: 65px;
+$outline-setting: 4px auto $primary-color;
+
+$stock-badge-size: $body-font-size-2;
+
+// Placeholder colors
+$color-placeholder-background: mix($border-color, $body-background-color);
+$color-placeholder-foreground: $body-text-color;
+
+// Breakpoint Sizes
+
+$l: 1200px;
+$md: 1020px;
+$featured-product: 920px;
+$medium-small: 920px;
+$ipad: 768px;
+$sm: 720px;
+$xs: 480px;
+$bp-spb: 1160px;
+
+// Icons
+
+$icon-fancy: "\e900";
+$icon-rss2: "\ea9c";
+$icon-pinterest: "\ead1";
+$icon-google-plus: "\ea8b";
+$icon-twitter: "\ea96";
+$icon-facebook: "\ea91";
+$icon-info: "\e101";
+$icon-questionmark: "\e102";
+$icon-ruler: "\e105";
+$icon-email: "\e104";
+$icon-pencil: "\e103";
+$icon-shirt: "\e106";
+$icon-amazon-payments: "\e800";
+$icon-american-express: "\41";
+$icon-bitcoin: "\42";
+$icon-dankort: "\e210";
+$icon-diners-club: "\e213";
+$icon-discover: "\e205";
+$icon-dogecoin: "\e908";
+$icon-dwolla: "\e218";
+$icon-forbrugsforeningen: "\e903";
+$icon-jcb: "\e211";
+$icon-litecoin: "\e909";
+$icon-maestro: "\e212";
+$icon-mastercard: "\e202";
+$icon-paypal: "\e204";
+$icon-visa: "\e201";
+$icon-cirrus: "\e208";
+$icon-interac: "\e207";
+$icon-stripe: "\e206";
+$icon-apple-pay: "\e901";
+$icon-shopify-pay: "\e902";
+$icon-cart: "\e600";
+$icon-head: "\e074";
+$icon-menu: "\f125";
+$icon-search: "\e036";
+$icon-mail: "\e907";
+$icon-star: "\e093";
+$icon-star-full: "\e904";
+$icon-plus: "\e114";
+$icon-minus: "\e115";
+$icon-check: "\e116";
+$icon-cross: "\e117";
+$icon-angle-left: "\f104";
+$icon-angle-right: "\f105";
+$icon-angle-down: "\f107";
+$icon-arrow-left: "\e905";
+$icon-arrow-right: "\e906";
+$icon-drawer-facebook: "\e041";
+$icon-drawer-twitter: "\e040";
+$icon-drawer-instagram: "\e057";
+$icon-drawer-youtube: "\e051";
+$icon-drawer-pinterest: "\e043";
+$icon-drawer-googleplus: "\e042";
+$icon-drawer-vimeo: "\e052";
+$icon-drawer-rss: "\e00b";
+
+// Slideshow variables
+// This value also has to match `./scripts/SlideshowView.coffee`, line 214
+$slideshowSpeed: 0.7s;
+
+
